@@ -1,0 +1,18 @@
+.todo-container .paper-container {
+  height: 100%;
+  width: 80%;
+  margin: 20px;
+  margin: 0 auto;
+  position: relative;
+  top: 50px;
+  padding: 20px 30px; 
+}
+
+.todo-container .paper-container .add-todo {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.todo-container .paper-container .add-todo .btn-container {
+  text-align: right;
+}

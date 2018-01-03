@@ -1,5 +1,6 @@
-import AuthActions from './authActions'
-
+import AuthActions from './authActions';
+import TodoActions from './todoActions';
 export {
-    AuthActions
+    AuthActions,
+    TodoActions
 }
