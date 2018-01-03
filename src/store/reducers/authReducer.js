@@ -5,11 +5,9 @@ import {
 } from '../constants'
 const initialState = {
     user: {},
-    authUser: {},
     isLoading: false,
     isError: false,
     error: {},
-    isLoggedIn: false,
 }
 
 export default function authReducer(state = initialState, action) {
@@ -17,17 +15,15 @@ export default function authReducer(state = initialState, action) {
         case SIGNUP:
             return {
                 ...state,
-                authUser: {},
                 user: {},
                 isLoading: true,
                 isError: false,
                 error: {},
-                isLoggedIn: false,
             }
         case SIGNUP_SUCCESS:
             return {
                 ...state,
-                authUser: action.payload,
+                user: action.payload,
                 isLoading: false,
             }
         case SIGNUP_FAILURE:
@@ -41,19 +37,15 @@ export default function authReducer(state = initialState, action) {
             return {
                 ...state,
                 user: {},
-                authUser: {},
                 isLoading: true,
                 isError: false,
                 error: {},
-                isLoggedIn: false,
             }
         case SIGNIN_SUCCESS:
             return {
                 ...state,
                 user: action.payload,
-                authUser: action.payload,
                 isLoading: false,
-                isLoggedIn: true,
             }
         case SIGNIN_FAILURE:
             return {
@@ -70,12 +62,10 @@ export default function authReducer(state = initialState, action) {
         case LOGOUT_SUCCESS:
             return {
                 ...state,
-                authUser: {},
                 user: {},
                 isLoading: false,
                 isError: false,
                 error: {},
-                isLoggedIn: false,
             }
         case LOGOUT_FAILURE:
             return {

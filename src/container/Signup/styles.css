@@ -1,0 +1,13 @@
+.signup-container .paper-container {
+  height: 100%;
+  max-width: 30%;
+  margin: 20px;
+  margin: 0 auto;
+  position: relative;
+  top: 150px;
+  padding: 20px 30px; 
+}
+.signup-container .paper-container .footer {
+  text-align: right;
+  padding-top: 20px;
+}
