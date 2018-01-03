@@ -4,7 +4,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import getMuiTheme from 'material-ui/styles/getMuiTheme';
 import AppRoutes from './../../config/AppRoutes'
 import './styles.css';
-import { Header } from './../Header'
+import Header from './../Header';
 
 class App extends Component {
 
@@ -13,17 +13,16 @@ class App extends Component {
       textColor: grey800,
     },
     appBar: {
-      height: 50,
+      height: 70,
       color: lightBlue800
-    },
-    paper:{}
+    }
   });
 
   render() {
     return (
        <MuiThemeProvider muiTheme={this.muiTheme}>
           <div>
-            <Header/>
+            <Header />
             <AppRoutes />
           </div>
       </MuiThemeProvider>
