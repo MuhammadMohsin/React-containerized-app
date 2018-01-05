@@ -1,7 +1,7 @@
 import React from 'react'
 import {
-  BrowserRouter,
-  Route
+  HashRouter,
+  Route,
 } from 'react-router-dom'
 
 import {
@@ -13,13 +13,13 @@ import {
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div>
+        <Route exact path="/" component={Signin} /> 
         <Route exact path="/signup" component={Signup} />
-        <Route exact path="/login" component={Signin} /> 
         <Route exact path="/dashboard" component={Home} />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   )
 };
 
