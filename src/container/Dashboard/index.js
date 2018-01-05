@@ -9,20 +9,20 @@ class Home extends Component {
     constructor() {
         super();
         this.state = {
-            todo : ""
+            todo: ""
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         this.props.getTodos();
     }
 
-    componentWillReceiveProps(np){
+    componentWillReceiveProps(np) {
         console.log(np);
     }
 
-    handleAddTodo = ()=>{
-        if(this.state.todo.trim() !==""){
+    handleAddTodo = () => {
+        if (this.state.todo.trim() !== "") {
             this.props.addTodo(this.state.todo);
             return false;
         }
@@ -40,16 +40,17 @@ class Home extends Component {
                             onChange={(e, val) => this.setState({ todo: val })}
                         />
                         <div className="btn-container">
-                            <RaisedButton primary={true} label="Add" onClick={this.handleAddTodo}/>
+                            <RaisedButton primary={true} label="Add" onClick={this.handleAddTodo} />
                         </div>
                     </div>
 
                     <div className="display-todo">
                         {
-                            this.props.todoObj.todos && this.props.todoObj.todos.map((d, ind)=> {
+                            this.props.todoObj.todos && this.props.todoObj.todos.map((d, ind) => {
                                 return (
                                     <div key={ind}>
-                                        {d} <button onClick={()=>this.props.deleteTodo(ind)}>delete</button>
+                                        <button onClick={() => this.props.deleteTodo(ind)}>Delete</button>
+                                        {d}
                                     </div>
                                 )
                             })
