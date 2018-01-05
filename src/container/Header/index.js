@@ -19,7 +19,7 @@ class Header extends Component {
   handleLogout = ()=>{
     this.props.logout();
     console.log(this.props)
-    window.location.href = "/login";
+    window.location.href = "/";
   }
   render() {
     return (

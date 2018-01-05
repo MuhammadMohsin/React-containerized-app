@@ -5,7 +5,7 @@ import {
     DELETE_TODO_SUCCESS,
 } from '../constants';
 const initialState = {
-    todos: [1,2,3],
+    todos: ['code', 'eat', 'sleep', 'repeat'],
     isLoading: false,
     isError: false,
     error: {},

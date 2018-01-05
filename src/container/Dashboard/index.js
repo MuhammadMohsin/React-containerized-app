@@ -24,9 +24,8 @@ class Home extends Component {
     handleAddTodo = () => {
         if (this.state.todo.trim() !== "") {
             this.props.addTodo(this.state.todo);
-            return false;
+            this.setState({ todo: "" });
         }
-        this.setState({ todo: "" });
     }
     render() {
         return (

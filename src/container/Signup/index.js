@@ -75,7 +75,7 @@ class Signup extends Component {
                     />
                     
                     <div className="footer">
-                        <Link to="/login">
+                        <Link to="/">
                                 <FlatButton label="Login" primary={true} /> 
                         </Link>
                         <FlatButton label="Create" secondary={true} onClick={this.handleSubmit}/>    
